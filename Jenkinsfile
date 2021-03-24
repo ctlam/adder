@@ -23,7 +23,7 @@ pipeline {
             steps { 
                 sh ''' python3 -m pytest  \
                     -v --junitxml=junit.xml \
-                    --cov-report xml --cov addr adder.py
+                    --cov-report xml --cov=addr adder.py
                     ''' 
             }   
         }   
