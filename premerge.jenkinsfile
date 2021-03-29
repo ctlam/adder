@@ -2,10 +2,12 @@ pipeline {
 
     agent { 
         dockerfile { 
-            label 'docker'  
+            label 'docker'
+            filename 'premerge.dockerfile'
         }   
     } 
-    
+   
+ 
     parameters {
         string (name: 'REF', defaultValue: '\${ghprbActualCommit}', description: 'Commit to build') 
     }
