@@ -2,7 +2,8 @@ pipeline {
 
     agent { 
         dockerfile { 
-            label 'docker'  
+            label 'docker'
+            filename 'premerge.dockerfile'
         }   
     } 
     
