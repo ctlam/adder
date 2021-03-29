@@ -49,7 +49,7 @@ pipeline {
                     export version=$(cat version)
 
                     ./package.sh \${version}
-                    ./integration-test.sh 3 8 11 ${version}
+                    ./integration-test.sh 4 8 12 ${version}
 
                     echo ${DOCKER_PSW} > docker-password
                     export HOME=${WORKSPACE}
